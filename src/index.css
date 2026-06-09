@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body bg-cream-100 text-gray-900 antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Decorative horizontal rule with diamonds */
+  .divider-ornate {
+    @apply flex items-center gap-3 my-6;
+  }
+  .divider-ornate::before,
+  .divider-ornate::after {
+    content: '';
+    @apply flex-1 h-px bg-gold-500 opacity-40;
+  }
+
+  .btn-primary {
+    @apply bg-maroon-600 hover:bg-maroon-700 text-white font-semibold
+           px-6 py-3 rounded-lg transition-all duration-200
+           active:scale-95 shadow-md hover:shadow-lg;
+  }
+
+  .btn-gold {
+    @apply bg-gold-500 hover:bg-gold-600 text-maroon-800 font-bold
+           px-6 py-3 rounded-lg transition-all duration-200
+           active:scale-95 shadow-md hover:shadow-lg;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-md hover:shadow-xl
+           transition-shadow duration-300 overflow-hidden;
+  }
+}
+
+/* Subtle saree-pattern background for hero */
+.hero-pattern {
+  background-color: #7b1a1a;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(212,175,55,0.08) 10px,
+      rgba(212,175,55,0.08) 11px
+    );
+}
+
+/* Sold-out diagonal ribbon */
+.sold-ribbon {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sold-ribbon span {
+  transform: rotate(-30deg);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: white;
+  border: 3px solid white;
+  padding: 0.25rem 1.5rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fff8f0; }
+::-webkit-scrollbar-thumb { background: #9b1c1c; border-radius: 3px; }
