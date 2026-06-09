@@ -1,4 +1,4 @@
-import { Heart, Phone } from 'lucide-react';
+import { Heart, Phone, MapPin } from 'lucide-react';
 import { CONFIG } from '../config';
 
 export default function Footer() {
@@ -7,13 +7,24 @@ export default function Footer() {
   return (
     <footer className="hero-pattern mt-16 py-10 px-4 text-center text-maroon-200">
 
-      <div className="flex items-center justify-center gap-2 mb-3">
+      <div className="flex items-center justify-center gap-2 mb-1">
         <div className="h-px w-12 bg-gold-500 opacity-40" />
         <span className="text-gold-400 text-sm font-display tracking-widest">
           {CONFIG.SITE_NAME}
         </span>
         <div className="h-px w-12 bg-gold-500 opacity-40" />
       </div>
+
+      <a
+        href={CONFIG.MAPS_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 text-gold-500 hover:text-gold-300
+                   text-xs mb-4 transition-colors"
+      >
+        <MapPin className="w-3 h-3" />
+        {CONFIG.SITE_LOCATION} — View on Google Maps
+      </a>
 
       <p className="text-sm mb-4">
         Fresh deals every day. Don't miss out!

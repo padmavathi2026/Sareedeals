@@ -23,7 +23,7 @@ function LoginGate({ onLogin }) {
     <div className="min-h-screen hero-pattern flex items-center justify-center px-4">
       <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm">
         <h1 className="font-display text-2xl text-maroon-700 mb-1">Admin Panel</h1>
-        <p className="text-gray-500 text-sm mb-6">Padmavathi Sarees – Deals Manager</p>
+        <p className="text-gray-500 text-sm mb-6">Padmavathi Cloth Stores, Mulkanoor – Deals Manager</p>
 
         <form onSubmit={submit} className="space-y-4">
           <div>
