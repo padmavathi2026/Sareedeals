@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { useDeals } from '../hooks/useDeals';
 
 export default function Home() {
-  const { deals, loading, error } = useDeals({ filterToday: true });
+  const { deals, loading, usingFallback } = useDeals();
 
   const active = useMemo(
     () => deals.filter((d) => d.status === 'active').length,
@@ -17,9 +17,15 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
+      {usingFallback && !loading && (
+        <div className="bg-amber-50 border-b border-amber-300 px-4 py-2 text-center text-xs text-amber-800">
+          ⚠️ Could not load <strong>deals_data.xlsx</strong> — showing sample data.
+          Make sure the file is in the <code className="bg-amber-100 px-1 rounded">public/</code> folder.
+        </div>
+      )}
+
       <HeroBanner total={deals.length} active={active} />
 
-      {/* Ornate section divider */}
       <div className="divider-ornate px-6 max-w-6xl w-full mx-auto">
         <span className="text-gold-600 text-sm font-display tracking-widest">
           ✦ Today's Collection ✦
@@ -27,9 +33,6 @@ export default function Home() {
       </div>
 
       <main className="flex-1 max-w-6xl mx-auto w-full px-4 pb-12">
-        {error && !deals.length && (
-          <p className="text-center text-red-500 py-8 text-sm">{error}</p>
-        )}
         <DealGrid deals={deals} loading={loading} />
       </main>
 

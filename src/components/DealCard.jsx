@@ -80,15 +80,11 @@ export default function DealCard({ deal }) {
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-3 gap-1">
-        <span className="text-xs text-maroon-600 font-semibold uppercase tracking-wider">
-          {fabric}
-        </span>
-
         <h3
           className="font-display text-gray-900 text-base leading-snug cursor-pointer hover:text-maroon-600 transition-colors"
           onClick={goToDetail}
         >
-          {name} Saree
+          {fabric} {name} Saree
         </h3>
 
         {/* Pricing */}

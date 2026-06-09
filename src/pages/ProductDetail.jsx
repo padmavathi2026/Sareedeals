@@ -15,7 +15,7 @@ function discount(original, offer) {
 export default function ProductDetail() {
   const { id }     = useParams();
   const navigate   = useNavigate();
-  const { deals, loading } = useDeals({ filterToday: false });
+  const { deals, loading } = useDeals();
 
   const deal = useMemo(
     () => deals.find((d) => String(d.id) === String(id)),
@@ -214,7 +214,8 @@ export default function ProductDetail() {
             {/* Details grid */}
             <div className="grid grid-cols-2 gap-3 text-sm">
               <Detail label="Fabric"    value={deal.fabric} />
-              <Detail label="Type"      value={deal.name} />
+              <Detail label="Name"      value={deal.name} />
+              <Detail label="Full Name" value={`${deal.fabric} ${deal.name} Saree`} />
               <Detail label="MRP"       value={formatINR(deal.original_price)} />
               <Detail label="Offer"     value={formatINR(deal.offer_price)} />
             </div>

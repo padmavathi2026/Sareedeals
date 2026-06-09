@@ -112,7 +112,7 @@ export default function Admin() {
   const toastTimer              = useRef(null);
 
   const { deals, loading, error, reload, toggleStatus, updatePrice } =
-    useDeals({ filterToday: false });
+    useDeals();
 
   const showToast = (msg) => {
     setToast(msg);
