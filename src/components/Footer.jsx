@@ -2,7 +2,7 @@ import { Heart, Phone } from 'lucide-react';
 import { CONFIG } from '../config';
 
 export default function Footer() {
-  const waLink = `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent('Hi! I need help with a saree.')}`;
+  const waLink = `https://wa.me/919014193407?text=${encodeURIComponent('Hi! I need help with a saree.')}`;
 
   return (
     <footer className="hero-pattern mt-16 py-10 px-4 text-center text-maroon-200">

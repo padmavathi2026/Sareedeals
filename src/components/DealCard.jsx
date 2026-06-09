@@ -21,7 +21,7 @@ export default function DealCard({ deal }) {
     deal.whatsapp_message ||
     `Hi! I want to grab Deal #${id} – ${fabric} ${name} at ${formatINR(offer_price)}.`
   );
-  const waLink = `https://wa.me/${CONFIG.WHATSAPP}?text=${waText}`;
+  const waLink = `https://wa.me/919014193407?text=${waText}`;
 
   const goToDetail = () => navigate(`/deal/${id}`);
 

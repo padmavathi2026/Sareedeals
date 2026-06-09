@@ -2,7 +2,7 @@ import { ShoppingBag } from 'lucide-react';
 import { CONFIG } from '../config';
 
 export default function Header() {
-  const waLink = `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent('Hi! I want to know more about today\'s deals.')}`;
+  const waLink = `https://wa.me/919014193407?text=${encodeURIComponent('Hi! I want to know more about today\'s deals.')}`;
 
   return (
     <header className="sticky top-0 z-50 hero-pattern shadow-lg">

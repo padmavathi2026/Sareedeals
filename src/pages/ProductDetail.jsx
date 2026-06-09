@@ -62,7 +62,7 @@ export default function ProductDetail() {
     deal.whatsapp_message ||
     `Hi! I'm interested in Deal #${deal.id} – ${deal.fabric} ${deal.name} Saree at ${formatINR(deal.offer_price)}. Is it available?`
   );
-  const waLink = `https://wa.me/${CONFIG.WHATSAPP}?text=${waText}`;
+  const waLink = `https://wa.me/919014193407?text=${waText}`;
 
   const handleShare = async () => {
     if (navigator.share) {
