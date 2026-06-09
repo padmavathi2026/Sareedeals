@@ -18,8 +18,10 @@ function normalise(row) {
     offer_price:    row.offer_price    ?? row['offer price']    ?? row['Offer Price']    ?? 0,
     // sheet uses "Available" / "Sold Out" — normalise to "active" / "sold"
     status:         statusNorm(row.status ?? row.Status ?? ''),
-    deal_date:      row.deal_date ?? row.date ?? row.Date ?? '',
-    image_url:      row.image_url ?? row.photo_url ?? row.Photo_Url ?? row['photo_url'] ?? '',
+    deal_date:        row.deal_date  ?? row.date       ?? row.Date       ?? '',
+    image_url:        row.image_url  ?? row.photo_url  ?? row.Photo_Url  ?? '',
+    photo_url1:       row.photo_url1 ?? row.Photo_Url1 ?? '',
+    description:      row.description ?? row.Description ?? '',
     whatsapp_message: row.whatsapp_message ?? '',
   };
 }
